@@ -3,7 +3,11 @@ var router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res) {
-  res.render('index', { title: 'Express' });
+  res.render('index', { title: 'Hello World' });
 });
+
+router.get('/getEvent', function(req, res){
+  res.render('events.jade', { user: 'Foo' });
+})
 
 module.exports = router;
