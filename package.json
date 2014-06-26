@@ -14,5 +14,9 @@
     "debug": "~0.7.4",
     "mongodb": "*",
     "jade": "~1.3.0"
+  },
+  "devDependencies": {
+    "q": "^1.0.1",
+    "request": "^2.36.0"
   }
 }
