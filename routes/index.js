@@ -7,7 +7,7 @@ router.get('/', function(req, res) {
 });
 
 router.get('/getEvent', function(req, res){
-  res.render('events.jade', { user: 'Foo' });
+  res.render('events', { user: 'Foo' });
 })
 
 module.exports = router;
