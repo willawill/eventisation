@@ -4,7 +4,7 @@ block content
   h1= title
   p Welcome to #{title}
   div
-    form(name="adduser",method="get", action="/getEvent")
+    form(name="adduser",method="get", action="/events")
       input(type="text", name="lat")
       input(type="text", name="long")
       button#btnSubmit(type="submit") submit

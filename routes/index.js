@@ -6,8 +6,8 @@ router.get('/', function(req, res) {
   res.render('index', { title: 'Hello World' });
 });
 
-router.get('/getEvent', function(req, res){
-  res.render('events', { user: 'Foo' });
+router.get('/events', function(req, res){
+  res.render('events', { lat: req.query.lat, long: req.query.long });
 })
 
 module.exports = router;
