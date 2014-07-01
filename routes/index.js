@@ -1,6 +1,7 @@
 var express = require('express');
 var eventBrite = require('../lib/eventbrite');
 var router = express.Router();
+var _ = require("underscore");
 
 /* GET home page. */
 router.get('/', function(req, res) {
@@ -8,8 +9,12 @@ router.get('/', function(req, res) {
 });
 
 router.get('/events', function(req, res){
-  var results = eventBrite.getEvents();
-  res.render('events', { lat: req.query.lat, long: req.query.long, events: results.events });
+  var params = {lat: req.query.lat, long: req.query.long, radius: req.query.radius};
+  eventBrite.getEvents(params)
+    .done(function(data) {
+      var events = _.map(JSON.parse(data)["events"].slice(1, -1), function(set){return _.values(set)});
+      res.render('events', { lat: req.query.lat, long: req.query.long, radius: req.query.radius, events: events });
+  });
 })
 
 module.exports = router;

@@ -2,7 +2,6 @@ extends layout
 
 block content
   h1 Welcome #{user}
-  p Here are some interestingevents we found for you in #{lat} and #{long}.
-  for event in events
-    p= event.name.text
-    p= event.description.text
+   p Here are some interestingevents we found for you at #{lat} and #{long} within #{radius} miles.
+  each event in events
+    p= event
