@@ -4,8 +4,13 @@ block content
   h1= title
   p Welcome to #{title}
   div
-    form(name="adduser",method="get", action="/events")
+    form(name="events",method="get", action="/events")
       input(type="text", name="lat")
       input(type="text", name="long")
       input(type="number", name="radius")
+      button#btnSubmit(type="submit") submit
+  div
+    form(name="restaurants",method="get", action="/restaurants")
+      input(type="text", name="lat")
+      input(type="text", name="long")
       button#btnSubmit(type="submit") submit

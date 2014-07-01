@@ -1,0 +1,9 @@
+extends layout
+
+block content
+	h1 Yelp
+	p Here are restaurants around you
+	each restaurant in restaurants
+		h2
+			a(href=restaurant.url) #{restaurant.name}
+		img(src=restaurant.rating_img_url_large)
