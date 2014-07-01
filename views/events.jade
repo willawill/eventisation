@@ -2,6 +2,9 @@ extends layout
 
 block content
   h1 Welcome #{user}
-   p Here are some interesting events we found for you at #{lat} and #{long} within #{radius} miles.
+  p Here are some interesting events we found for you at #{lat} and #{long} within #{radius} miles.
+  a(href="/") Back to homepage
   each event in events
-    p= event
+    h2
+      a(href=event.url) #{event.title}
+    p!= event.description
