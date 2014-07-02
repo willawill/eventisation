@@ -4,6 +4,9 @@ block content
 	h1 List of restaurant
 	p Here are restaurants around you
 	a(href="/#search") Back to Search
+	div#container
+		h2 Let's see what you got in this area
+		div#graph
 	each restaurant in restaurants
 		h2
 			a(href=restaurant.url) #{restaurant.name}

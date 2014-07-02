@@ -46,6 +46,10 @@ $(function () {
         .attr('class', 'bar')
         .attr('x', function (d) { return x(d.label); })
         .attr('width', x.rangeBand())
+        .attr('y', pad)
+        .transition()
+        .delay(function(d) { return d.value * 5})
+        .duration(500)
         .attr('y', function (d) { return y(d.value); })
         .attr('height', function (d) { return height-pad - y(d.value); });
     });
