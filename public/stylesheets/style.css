@@ -3,6 +3,58 @@ body {
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
+h1 {
+  text-align: center;
+}
+
 a {
   color: #00B7FF;
+}
+
+.question, #result {
+  text-align: center;
+  margin-bottom: 100px;
+}
+
+#ideal {
+  height: 500px;
+  margin: 5px;
+  border: 2px solid black;
+}
+
+#search{
+  width: 60%;
+  margin-left: auto ;
+  margin-right: auto ;
+}
+
+img {
+  height: 300px;
+}
+
+li{
+  display: inline-block;
+
+}
+.option {
+  color : purple;
+  margin-right: 20px;
+
+  img {
+    height: 300px;
+  }
+}
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #eee;
+  shape-rendering: crispEdges;
+}
+
+.axis text{
+  font-size: 11px;
+}
+.bar {
+  fill: steelblue;
 }
