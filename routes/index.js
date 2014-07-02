@@ -6,8 +6,10 @@ var yelp_apikeys = require("../conf").YELP;
 var locus = require("locus");
 /* GET home page. */
 router.get('/', function(req, res) {
-  res.render('index', { title: 'Hello World' });
+  res.render('index');
 });
+
+
 
 router.get('/events', function(req, res){
   var params = {lat: req.query.lat, long: req.query.long, radius: req.query.radius};
@@ -36,10 +38,8 @@ router.get('/restaurants', function(req, res){
   var params = req.query.lat + "," + req.query.long;
 
 	yelp.search({category_filter: "restaurants", ll: params }, function(error, data) {
+    console.log(data)
 		res.render('yelp', { restaurants: data.businesses })
 	});
 })
-
-
-
 module.exports = router;

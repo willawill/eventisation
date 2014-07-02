@@ -2,15 +2,15 @@ extends layout
 
 block content
   h1= title
-  p Welcome to #{title}
+  p Welcome to Eventisation
   div
     form(name="events",method="get", action="/events")
-      input(type="text", name="lat")
-      input(type="text", name="long")
-      input(type="number", name="radius")
+      input(type="text", name="lat", placeholder="latitude")
+      input(type="text", name="long",placeholder="longitude")
+      input(type="number", name="radius",placeholder="radius")
       button#btnSubmit(type="submit") submit
   div
     form(name="restaurants",method="get", action="/restaurants")
-      input(type="text", name="lat")
-      input(type="text", name="long")
+      input(type="text", name="lat", placeholder="latitude")
+      input(type="text", name="long", placeholder="longtitude")
       button#btnSubmit(type="submit") submit
