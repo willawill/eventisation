@@ -19,11 +19,4 @@
  {"label": "Civic Center", "value":1},
  {"label": "Radio Row", "value":17},
  {"label": "South Street Seaport", "value":62},
- {"label": "Battery Park City", "value":41},
- {"label": "pyramid", "value":1},
- {"label": "Rectangle", "value":14},
- {"label": "Round", "value":2},
- {"label": "Sphere", "value":57},
- {"label": "Teardrop", "value":18},
- {"label": "Triangle", "value":36},
- {"label": "Unknown", "value":9}]
+ {"label": "Battery Park City", "value":41}]
