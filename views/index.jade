@@ -1,16 +1,52 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to Eventisation
-  div
-    form(name="events",method="get", action="/events")
-      input(type="text", name="lat", placeholder="latitude")
-      input(type="text", name="long",placeholder="longitude")
-      input(type="number", name="radius",placeholder="radius")
-      button#btnSubmit(type="submit") submit
-  div
-    form(name="restaurants",method="get", action="/restaurants")
-      input(type="text", name="lat", placeholder="latitude")
-      input(type="text", name="long", placeholder="longtitude")
-      button#btnSubmit(type="submit") submit
+  h1 So You Want to Live in Lower Manhattan, Answer me some questions now
+  section#question-one.question
+    h2 Do you like cooking at home or eating out?
+      ul
+        li.option
+          h2
+            a(href="#question-two") Eating out
+          div#restaurant
+        li.option
+          h2
+            a(href="#question-two") Cook at home
+          div#grocery
+  section#question-two.question
+    h2 What do you do on the weekends?
+      ul
+        li.option
+          h2
+            a(href="#result") PARTY!
+          div#party
+            img(src="/images/party.jpg")
+        li.option
+          h2
+            a(href="#result") Home Depot
+          div#home-depot
+            img(src="/images/home-depot.jpg")
+
+  section#result
+    h1  So we packed your an ideal neighborhood here! Enjoy!
+    h2
+      a(href="#search") Do some search and see what haps is out there?
+
+    img#ideal(src="/images/ideal-hood.jpg")
+
+
+
+  section#search
+    div
+      p Find yourself some intersting events:
+      form(name="events",method="get", action="/events")
+        input(type="text", name="lat", placeholder="latitude")
+        input(type="text", name="long",placeholder="longitude")
+        input(type="number", name="radius",placeholder="radius")
+        button#btnSubmit(type="submit") submit
+    div
+      p Find yourself some A+ restaurants:
+      form(name="restaurants",method="get", action="/restaurants")
+        input(type="text", name="lat", placeholder="latitude")
+        input(type="text", name="long", placeholder="longtitude")
+        button#btnSubmit(type="submit") submit
