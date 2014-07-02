@@ -1,9 +1,9 @@
 extends layout
 
 block content
-	h1 Yelp
+	h1 List of restaurant
 	p Here are restaurants around you
+	a(href="/#search") Back to Search
 	each restaurant in restaurants
 		h2
 			a(href=restaurant.url) #{restaurant.name}
-		img(src=restaurant.rating_img_url_large)

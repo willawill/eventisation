@@ -14,7 +14,12 @@ router.get('/', function(req, res){
   var params = req.query.lat + "," + req.query.long;
 
   yelp.search({category_filter: "restaurants", ll: params }, function(error, data) {
-    res.render('yelp', { restaurants: data.businesses })
+    if (error) {
+      res.render("error", {message: "Sorry, we couldn not find anything here."})
+    }
+    else{
+      res.render('restaurants', { restaurants: data.businesses })
+    }
   });
 })
 
